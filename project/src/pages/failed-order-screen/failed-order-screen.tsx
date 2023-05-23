@@ -22,9 +22,9 @@ function FailedOrderScreen(): JSX.Element {
 
         <main>
           <div className="page-message">
-            <h1 className="page-message__title">Оформить заказ не удалось</h1>
-            <span className="page-message__text">Попробуйте ещё раз позднее</span>
-            <Link className="page-message__link" to={AppRoute.Catalog}>Вернуться на страницу каталога</Link>
+            <h1 className="page-message__title">Error in checkout</h1>
+            <span className="page-message__text">Please, try again</span>
+            <Link className="page-message__link" to={AppRoute.Catalog}>To main page</Link>
           </div>
         </main>
 

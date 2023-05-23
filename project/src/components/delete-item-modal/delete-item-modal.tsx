@@ -27,7 +27,7 @@ function DeleteItemModal({dataForAddItemModal, onCloseBtnOrOverlayClick, isModal
 
   const { name, vendorCode, type, category, level, previewImg, previewImg2x, previewImgWebp, previewImgWebp2x } = dataForAddItemModal;
 
-  //решение взято и модифициронвано с ресурса: https://hidde.blog/using-javascript-to-trap-focus-in-an-element/
+  //solution: https://hidde.blog/using-javascript-to-trap-focus-in-an-element/
   const handleShiftTabBtnsKeydown = (evt:React.KeyboardEvent<Element>) => {
     const isShiftTabBtnsPressed = (isTabKeyPressed(evt) || evt.code === TAB_EVENT_CODE) && evt.shiftKey;
     const isDeleteBtnActiveElement = document.activeElement === deleteButtonRef.current;
@@ -67,7 +67,7 @@ function DeleteItemModal({dataForAddItemModal, onCloseBtnOrOverlayClick, isModal
         >
         </div>
         <div className="modal__content">
-          <p className="title title--h4">Удалить этот товар?</p>
+          <p className="title title--h4">Are you sure you want to delete this item?</p>
           <div className="basket-item basket-item--short">
             <div className="basket-item__img">
               <picture>
@@ -78,10 +78,10 @@ function DeleteItemModal({dataForAddItemModal, onCloseBtnOrOverlayClick, isModal
             <div className="basket-item__description">
               <p className="basket-item__title">{`${category} «${name}»`}</p>
               <ul className="basket-item__list">
-                <li className="basket-item__list-item"><span className="basket-item__article">Артикул:</span> <span className="basket-item__number">{vendorCode}</span>
+                <li className="basket-item__list-item"><span className="basket-item__article">Vendor code:</span> <span className="basket-item__number">{vendorCode}</span>
                 </li>
                 <li className="basket-item__list-item">{type} {category.toLowerCase() === 'фотоаппарат' ? 'фотокамера' : 'видеокамера'}</li>
-                <li className="basket-item__list-item">{level} уровень</li>
+                <li className="basket-item__list-item">{level} level</li>
               </ul>
             </div>
           </div>
@@ -93,13 +93,13 @@ function DeleteItemModal({dataForAddItemModal, onCloseBtnOrOverlayClick, isModal
               onClick={onDeleteBtnClick}
               onKeyDown={handleShiftTabBtnsKeydown}
               data-testid={'delete-btn'}
-            >Удалить
+            >Delete
             </button>
             <button
               className="btn btn--transparent modal__btn modal__btn--half-width"
               onClick={(evt) => handleCloseBtnOrOverlayClick(evt)}
               data-testid={'close-btn'}
-            >Продолжить покупки
+            >Continue shopping
             </button>
           </div>
           <button

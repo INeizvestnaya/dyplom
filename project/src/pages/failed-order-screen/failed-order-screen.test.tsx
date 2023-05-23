@@ -30,9 +30,9 @@ describe('Page: FailedOrderScreen', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Оформить заказ не удалось/i)).toBeInTheDocument();
-    expect(screen.getByText(/Попробуйте ещё раз позднее/i)).toBeInTheDocument();
-    expect(screen.getByText(/Вернуться на страницу каталога/i)).toBeInTheDocument();
+    expect(screen.getByText(/Error in checkout/i)).toBeInTheDocument();
+    expect(screen.getByText(/Please, try again/i)).toBeInTheDocument();
+    expect(screen.getByText(/To main page/i)).toBeInTheDocument();
   });
 
   it('should redirect to /catalog when user clicked back to catalog link', async () => {
@@ -57,8 +57,8 @@ describe('Page: FailedOrderScreen', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Оформить заказ не удалось/i)).toBeInTheDocument();
-    await userEvent.click(screen.getByText(/Вернуться на страницу каталога/i));
+    expect(screen.getByText(/Error in checkout/i)).toBeInTheDocument();
+    await userEvent.click(screen.getByText(/To main page/i));
     expect(screen.getByText(/This is a catalog page/i)).toBeInTheDocument();
   });
 });

@@ -34,13 +34,13 @@ describe('Component: Footer', () => {
       </Provider>
     );
 
-    expect(screen.getByText('Интернет-магазин фото- и видеотехники')).toBeInTheDocument();
-    expect(screen.getByText('Навигация')).toBeInTheDocument();
-    expect(screen.getByText('Ресурсы')).toBeInTheDocument();
-    expect(screen.getByText('Поддержка')).toBeInTheDocument();
+    expect(screen.getByText('IShotStore - online photo equipment shopи')).toBeInTheDocument();
+    expect(screen.getByText('Navigation')).toBeInTheDocument();
+    expect(screen.getByText('Resources')).toBeInTheDocument();
+    expect(screen.getByText('Support')).toBeInTheDocument();
   });
 
-  it('should redirect to CatalogScreen when user clicked to link "Каталог"', async () => {
+  it('should redirect to CatalogScreen when user clicked to link "Catalog"', async () => {
     history.push('/basket');
     render(
       <Provider store={store}>
@@ -59,7 +59,7 @@ describe('Component: Footer', () => {
       </Provider>
     );
 
-    expect(screen.getByText('Если у вас есть промокод на скидку, примените его в этом поле')).toBeInTheDocument();
+    expect(screen.getByText('If you have a promo code, apply it here')).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('footer-catalog'));
 

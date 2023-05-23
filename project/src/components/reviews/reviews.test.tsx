@@ -18,12 +18,12 @@ describe('Component: Reviews', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText('Отзывы')).toBeInTheDocument();
-    expect(screen.getByText('Оставить свой отзыв')).toBeInTheDocument();
-    expect(screen.getByText('Показать больше отзывов')).toBeInTheDocument();
+    expect(screen.getByText('Reviews')).toBeInTheDocument();
+    expect(screen.getByText('Leave a review')).toBeInTheDocument();
+    expect(screen.getByText('Show more reviews')).toBeInTheDocument();
   });
 
-  it('should hide the button when "Показать больше отзывов" will be click (reviews amount in array is equal four)', async () => {
+  it('should hide the button when "Show more reviews" will be click (reviews amount in array is equal four)', async () => {
     render(
       <HistoryRouter history={history}>
         <Reviews
@@ -33,12 +33,12 @@ describe('Component: Reviews', () => {
       </HistoryRouter>
     );
 
-    await userEvent.click(screen.getByText('Показать больше отзывов'));
+    await userEvent.click(screen.getByText('Show more reviews'));
 
-    expect(screen.queryByText('Показать больше отзывов')).not.toBeInTheDocument();
+    expect(screen.queryByText('Show more reviews')).not.toBeInTheDocument();
   });
 
-  it('openModal should called when user clicked "Оставить свой отзыв" button', async () => {
+  it('openModal should called when user clicked "Leave a review" button', async () => {
     const sendReviewButtonClick = jest.fn();
     render(
       <HistoryRouter history={history}>
@@ -49,7 +49,7 @@ describe('Component: Reviews', () => {
       </HistoryRouter>
     );
 
-    await userEvent.click(screen.getByText('Оставить свой отзыв'));
+    await userEvent.click(screen.getByText('Leave a review'));
 
     expect(sendReviewButtonClick).toBeCalled();
   });

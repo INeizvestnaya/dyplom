@@ -13,6 +13,6 @@ describe('Component: EmptyQuery', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText(/По вашему запросу ничего не найдено/i)).toBeInTheDocument();
+    expect(screen.getByText(/No results found/i)).toBeInTheDocument();
   });
 });

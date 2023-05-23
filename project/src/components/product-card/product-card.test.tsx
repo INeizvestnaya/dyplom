@@ -29,12 +29,12 @@ describe('Component: ProductCard', ()=> {
     );
 
     expect(screen.getByText('Видеокамера Ретрокамера Dus Auge lV')).toBeInTheDocument();
-    expect(screen.getByText('73 450 ₽')).toBeInTheDocument();
-    expect(screen.getByText('Купить')).toBeInTheDocument();
-    expect(screen.getByText('Подробнее')).toBeInTheDocument();
+    expect(screen.getByText('73 450 $')).toBeInTheDocument();
+    expect(screen.getByText('Buy')).toBeInTheDocument();
+    expect(screen.getByText('More')).toBeInTheDocument();
   });
 
-  it('when user click "Купить" button, should open modal', async () => {
+  it('when user click "Buy" button, should open modal', async () => {
     const buyButtonClickHandler = jest.fn();
     render(
       <Provider store={store}>
@@ -49,12 +49,12 @@ describe('Component: ProductCard', ()=> {
       </Provider>
     );
 
-    await userEvent.click(screen.getByText('Купить'));
+    await userEvent.click(screen.getByText('Buy'));
 
     expect(buyButtonClickHandler).toBeCalled();
   });
 
-  it('should redirect to ProductScreenm url when user clicked to button "Подробнее"', async () => {
+  it('should redirect to ProductScreen url when user clicked to button "More"', async () => {
     render(
       <Provider store={store}>
         <HistoryRouter history={history}>
@@ -79,11 +79,11 @@ describe('Component: ProductCard', ()=> {
       </Provider>
     );
 
-    expect(screen.getByText('Подробнее')).toBeInTheDocument();
+    expect(screen.getByText('More')).toBeInTheDocument();
 
-    await userEvent.click(screen.getByText('Подробнее'));
+    await userEvent.click(screen.getByText('More'));
 
-    expect(screen.queryByText('Подробнее')).not.toBeInTheDocument();
+    expect(screen.queryByText('More')).not.toBeInTheDocument();
     expect(screen.getByText('This is Product Screen')).toBeInTheDocument();
   });
 });

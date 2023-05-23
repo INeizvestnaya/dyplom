@@ -102,7 +102,7 @@ function ReviewModal({onCloseBtnOrOverlayClick, cameraId, isReviewModalOpened}: 
         >
         </div>
         <div className="modal__content">
-          <p className="title title--h4">Оставить отзыв</p>
+          <p className="title title--h4">Leave review</p>
           <div className="form-review">
             <form
               method="post"
@@ -110,7 +110,7 @@ function ReviewModal({onCloseBtnOrOverlayClick, cameraId, isReviewModalOpened}: 
             >
               <div className="form-review__rate">
                 <fieldset className={isRatingIsInvalid ? 'rate form-review__item is-invalid' : 'rate form-review__item'}>
-                  <legend className="rate__caption">Рейтинг
+                  <legend className="rate__caption">Rating
                     <svg width="9" height="9" aria-hidden="true">
                       <use xlinkHref="#icon-snowflake"></use>
                     </svg>
@@ -118,28 +118,28 @@ function ReviewModal({onCloseBtnOrOverlayClick, cameraId, isReviewModalOpened}: 
                   <div className="rate__bar">
                     <div className="rate__group">
                       <input className="visually-hidden" id="star-5" name="rate" type="radio" value="5" onClick={(evt) => setRatingValue(Number((evt.target as HTMLInputElement).value))}/>
-                      <label className="rate__label" htmlFor="star-5" title="Отлично"></label>
+                      <label className="rate__label" htmlFor="star-5" title="Great"></label>
                       <input className="visually-hidden" id="star-4" name="rate" type="radio" value="4" onClick={(evt) => setRatingValue(Number((evt.target as HTMLInputElement).value))}/>
-                      <label className="rate__label" htmlFor="star-4" title="Хорошо"></label>
+                      <label className="rate__label" htmlFor="star-4" title="Good"></label>
                       <input className="visually-hidden" id="star-3" name="rate" type="radio" value="3" onClick={(evt) => setRatingValue(Number((evt.target as HTMLInputElement).value))}/>
-                      <label className="rate__label" htmlFor="star-3" title="Нормально"></label>
+                      <label className="rate__label" htmlFor="star-3" title="Normal"></label>
                       <input className="visually-hidden" id="star-2" name="rate" type="radio" value="2" onClick={(evt) => setRatingValue(Number((evt.target as HTMLInputElement).value))} />
-                      <label className="rate__label" htmlFor="star-2" title="Плохо"></label>
+                      <label className="rate__label" htmlFor="star-2" title="Bad"></label>
                       <input className="visually-hidden" id="star-1" name="rate" type="radio" value="1" onClick={(evt) => setRatingValue(Number((evt.target as HTMLInputElement).value))} ref={firstStartRef} onKeyDown={handleShiftTabBtnsKeydown}/>
-                      <label className="rate__label" htmlFor="star-1" title="Ужасно"></label>
+                      <label className="rate__label" htmlFor="star-1" title="Horrible"></label>
                     </div>
                     <div className="rate__progress">
                       <span className="rate__stars">{ratingValue || '0'}</span> <span>/</span> <span className="rate__all-stars">5</span>
                     </div>
                   </div>
-                  <p className="rate__message">Нужно оценить товар</p>
+                  <p className="rate__message">Rate the item</p>
                 </fieldset>
                 <div
                   className={isNameIsInvalid ? 'custom-input form-review__item is-invalid' : 'custom-input form-review__item'}
                   data-testid="div-user-name"
                 >
                   <label>
-                    <span className="custom-input__label">Ваше имя
+                    <span className="custom-input__label">Your name
                       <svg width="9" height="9" aria-hidden="true">
                         <use xlinkHref="#icon-snowflake"></use>
                       </svg>
@@ -147,19 +147,19 @@ function ReviewModal({onCloseBtnOrOverlayClick, cameraId, isReviewModalOpened}: 
                     <input
                       type="text"
                       name="user-name"
-                      placeholder="Введите ваше имя"
+                      placeholder="Enter your name"
                       ref={nameRef}
                       data-testid="input-user-name"
                     />
                   </label>
-                  <p className="custom-input__error">Нужно указать имя</p>
+                  <p className="custom-input__error">Need to enter your name</p>
                 </div>
                 <div
                   className={isAdvantagesIsInvalid ? 'custom-input form-review__item is-invalid' : 'custom-input form-review__item'}
                   data-testid="div-user-plus"
                 >
                   <label>
-                    <span className="custom-input__label">Достоинства
+                    <span className="custom-input__label">Pros
                       <svg width="9" height="9" aria-hidden="true">
                         <use xlinkHref="#icon-snowflake"></use>
                       </svg>
@@ -167,15 +167,15 @@ function ReviewModal({onCloseBtnOrOverlayClick, cameraId, isReviewModalOpened}: 
                     <input
                       type="text"
                       name="user-plus"
-                      placeholder="Основные преимущества товара"
+                      placeholder="Main pros"
                       ref={advantagesRef}
                     />
                   </label>
-                  <p className="custom-input__error">Нужно указать достоинства</p>
+                  <p className="custom-input__error">Need to specify pros</p>
                 </div>
                 <div className={isDisadvantagesIsInvalid ? 'custom-input form-review__item is-invalid' : 'custom-input form-review__item'}>
                   <label>
-                    <span className="custom-input__label">Недостатки
+                    <span className="custom-input__label">Cons
                       <svg width="9" height="9" aria-hidden="true">
                         <use xlinkHref="#icon-snowflake"></use>
                       </svg>
@@ -183,15 +183,15 @@ function ReviewModal({onCloseBtnOrOverlayClick, cameraId, isReviewModalOpened}: 
                     <input
                       type="text"
                       name="user-minus"
-                      placeholder="Главные недостатки товара"
+                      placeholder="Main cons"
                       ref={disadvantagesRef}
                     />
                   </label>
-                  <p className="custom-input__error">Нужно указать недостатки</p>
+                  <p className="custom-input__error">Need to specify cons</p>
                 </div>
                 <div className={isReviewIsInvalid ? 'custom-textarea form-review__item is-invalid' : 'custom-textarea form-review__item'}>
                   <label>
-                    <span className="custom-textarea__label">Комментарий
+                    <span className="custom-textarea__label">Comment
                       <svg width="9" height="9" aria-hidden="true">
                         <use xlinkHref="#icon-snowflake"></use>
                       </svg>
@@ -199,12 +199,12 @@ function ReviewModal({onCloseBtnOrOverlayClick, cameraId, isReviewModalOpened}: 
                     <textarea
                       name="user-comment"
                       minLength={5}
-                      placeholder="Поделитесь своим опытом покупки"
+                      placeholder="Write about your usage experience"
                       ref={reviewRef}
                     >
                     </textarea>
                   </label>
-                  <div className="custom-textarea__error">Нужно добавить комментарий</div>
+                  <div className="custom-textarea__error">need to write a comment</div>
                 </div>
               </div>
               <button
@@ -212,7 +212,7 @@ function ReviewModal({onCloseBtnOrOverlayClick, cameraId, isReviewModalOpened}: 
                 type="submit"
                 disabled={isSubmitButtonDisabled}
                 ref={sentReviewButtonRef}
-              >Отправить отзыв
+              >Finish review
               </button>
             </form>
           </div>

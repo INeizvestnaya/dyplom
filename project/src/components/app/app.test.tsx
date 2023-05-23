@@ -67,7 +67,7 @@ describe('Application Routing', () => {
     render(fakeApp);
 
     expect(screen.getByTestId('basket')).toBeInTheDocument();
-    expect(screen.getByText(/Если у вас есть промокод на скидку, примените его в этом поле/i)).toBeInTheDocument();
+    expect(screen.getByText(/If you have a promo code, apply it here/i)).toBeInTheDocument();
     expect(screen.getByText(/Оформить заказ/i)).toBeInTheDocument();
   });
 

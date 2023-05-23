@@ -22,8 +22,8 @@ describe('Component: Banner', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText('Новинка!')).toBeInTheDocument();
-    expect(screen.getByText('Профессиональная камера от известного производителя')).toBeInTheDocument();
+    expect(screen.getByText('New')).toBeInTheDocument();
+    expect(screen.getByText('Professional full frame camera from famous brand!')).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveClass('btn');
   });
 

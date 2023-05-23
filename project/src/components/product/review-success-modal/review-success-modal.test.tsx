@@ -23,11 +23,11 @@ describe('Component: ReviewSuccessModal', ()=> {
       </Provider>
     );
 
-    expect(screen.getByText('Спасибо за отзыв')).toBeInTheDocument();
-    expect(screen.getByText('Вернуться к покупкам')).toBeInTheDocument();
+    expect(screen.getByText('Thank you for a review!')).toBeInTheDocument();
+    expect(screen.getByText('Back to shopping')).toBeInTheDocument();
   });
 
-  it('should close modal when user clicked "Вернуться к покупкам" button', async () => {
+  it('should close modal when user clicked "Back to shopping" button', async () => {
     const backToShoppingButtonClickHandle = jest.fn();
     render(
       <Provider store={store}>
@@ -40,9 +40,9 @@ describe('Component: ReviewSuccessModal', ()=> {
       </Provider>
     );
 
-    expect(screen.getByText('Спасибо за отзыв')).toBeInTheDocument();
+    expect(screen.getByText('Thank you for a review!')).toBeInTheDocument();
 
-    await userEvent.click(screen.getByText('Вернуться к покупкам'));
+    await userEvent.click(screen.getByText('Back to shopping'));
 
     expect(backToShoppingButtonClickHandle).toBeCalled();
   });

@@ -28,8 +28,8 @@ describe('Page: NotFoundScreen', () => {
     );
 
     const headerElement = screen.getByText('404');
-    const spanElement = screen.getByText('Страница не найдена');
-    const linkElement = screen.getByText('Вернуться на страницу каталога');
+    const spanElement = screen.getByText('Page not found');
+    const linkElement = screen.getByText('Back to main page');
 
     expect(headerElement).toBeInTheDocument();
     expect(spanElement).toBeInTheDocument();

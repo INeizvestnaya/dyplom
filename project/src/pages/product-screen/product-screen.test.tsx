@@ -32,8 +32,8 @@ describe('Page: ProductScreen', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Добавить в корзину/i)).toBeInTheDocument();
-    expect(screen.getByText(/Характеристики/i)).toBeInTheDocument();
-    expect(screen.getByText(/Описание/i)).toBeInTheDocument();
+    expect(screen.getByText(/Add to the cart/i)).toBeInTheDocument();
+    expect(screen.getByText(/Characteristics/i)).toBeInTheDocument();
+    expect(screen.getByText(/Description/i)).toBeInTheDocument();
   });
 });

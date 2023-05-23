@@ -232,27 +232,27 @@ function BasketScreen(): JSX.Element {
               <div className="container">
                 <ul className="breadcrumbs__list">
                   <li className="breadcrumbs__item">
-                    <a className="breadcrumbs__link" href="#!">Главная
+                    <a className="breadcrumbs__link" href="#!">Main
                       <svg width="5" height="8" aria-hidden="true">
                         <use xlinkHref="#icon-arrow-mini"></use>
                       </svg>
                     </a>
                   </li>
                   <li className="breadcrumbs__item">
-                    <Link className="breadcrumbs__link" to='/'>Каталог
+                    <Link className="breadcrumbs__link" to='/'>Catalog
                       <svg width="5" height="8" aria-hidden="true">
                         <use xlinkHref="#icon-arrow-mini"></use>
                       </svg>
                     </Link>
                   </li>
-                  <li className="breadcrumbs__item"><span className="breadcrumbs__link breadcrumbs__link--active">Корзина</span>
+                  <li className="breadcrumbs__item"><span className="breadcrumbs__link breadcrumbs__link--active">Cart</span>
                   </li>
                 </ul>
               </div>
             </div>
             <section className="basket">
               <div className="container">
-                <h1 className="title title--h2" data-testid="basket">Корзина</h1>
+                <h1 className="title title--h2" data-testid="basket">Cart</h1>
                 <ul className="basket__list">
 
                   {camerasList.map((product) =>
@@ -270,31 +270,31 @@ function BasketScreen(): JSX.Element {
                 </ul>
                 <div className="basket__summary">
                   <div className="basket__promo">
-                    <p className="title title--h4">Если у вас есть промокод на скидку, примените его в этом поле</p>
+                    <p className="title title--h4">If you have a promo code, apply it here</p>
                     <div className="basket-form">
                       <form
                         action="#"
                         onSubmit={handlePromocodeFormSubmit}
                       >
                         <div className={getClassForPromocodeInput(isValid, isInvalid)}>
-                          <label><span className="custom-input__label">Промокод</span>
+                          <label><span className="custom-input__label">Promo code</span>
                             <input
                               type="text"
                               name="promo"
-                              placeholder="Введите промокод"
+                              placeholder="Enter promo code"
                               onInput={handlePromoInputOnInput}
                               value={promocodeInputValue}
                               onFocus={handleInputFocus}
                             />
                           </label>
-                          <p className="custom-input__error is-invalid">Промокод неверный</p>
-                          <p className="custom-input__success">Промокод принят!</p>
+                          <p className="custom-input__error is-invalid">Promo code is incorrect</p>
+                          <p className="custom-input__success">Promo code accepted!</p>
                         </div>
                         <button
                           className="btn"
                           type="submit"
                           disabled={isApplyBtnDisabled}
-                        >Применить
+                        >Apply
                         </button>
                       </form>
                     </div>
@@ -302,23 +302,23 @@ function BasketScreen(): JSX.Element {
 
                   <div className="basket__summary-order">
                     <p className="basket__summary-item">
-                      <span className="basket__summary-text">Всего:</span>
-                      <span className="basket__summary-value">{separateNumbers(totalPrice)} ₽</span>
+                      <span className="basket__summary-text">Total:</span>
+                      <span className="basket__summary-value">{separateNumbers(totalPrice)} $</span>
                     </p>
                     <p className="basket__summary-item">
-                      <span className="basket__summary-text">Скидка:</span>
-                      <span className={(discountValueInPercent !== 0 && totalPrice > 0) ? 'basket__summary-value basket__summary-value--bonus' : 'basket__summary-value'}>{separateNumbers(discountFromTotalnRubles)} ₽</span>
+                      <span className="basket__summary-text">Discont:</span>
+                      <span className={(discountValueInPercent !== 0 && totalPrice > 0) ? 'basket__summary-value basket__summary-value--bonus' : 'basket__summary-value'}>{separateNumbers(discountFromTotalnRubles)} $</span>
                     </p>
                     <p className="basket__summary-item">
-                      <span className="basket__summary-text basket__summary-text--total">К оплате:</span>
-                      <span className="basket__summary-value basket__summary-text--total">{separateNumbers(costForPayment)} ₽</span>
+                      <span className="basket__summary-text basket__summary-text--total">Your price:</span>
+                      <span className="basket__summary-value basket__summary-text--total">{separateNumbers(costForPayment)} $</span>
                     </p>
                     <button
                       className="btn btn--purple"
                       type="button"
                       disabled={isOrderBtnDisabled}
                       onClick={handleOrderBtnClick}
-                    >Оформить заказ
+                    >Checkout
                     </button>
                   </div>
                 </div>

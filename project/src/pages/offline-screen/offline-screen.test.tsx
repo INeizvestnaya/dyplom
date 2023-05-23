@@ -27,9 +27,9 @@ describe('Page: OfflineScreen', () => {
       </Provider>
     );
 
-    const headerElement = screen.getByText('В данный момент сайт недоступен');
-    const spanElement = screen.getByText('Попробуйте ещё раз позднее');
-    const linkElement = screen.getByText('Страница каталога');
+    const headerElement = screen.getByText('The site is currently unavailable');
+    const spanElement = screen.getByText('Try again later');
+    const linkElement = screen.getByText('Catalog page');
 
     expect(headerElement).toBeInTheDocument();
     expect(spanElement).toBeInTheDocument();

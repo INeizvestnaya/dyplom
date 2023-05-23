@@ -185,14 +185,14 @@ function ProductScreen(): JSX.Element {
               <div className="container">
                 <ul className="breadcrumbs__list">
                   <li className="breadcrumbs__item">
-                    <a className="breadcrumbs__link" href="#!">Главная
+                    <a className="breadcrumbs__link" href="#!">Main
                       <svg width="5" height="8" aria-hidden="true">
                         <use xlinkHref="#icon-arrow-mini"></use>
                       </svg>
                     </a>
                   </li>
                   <li className="breadcrumbs__item">
-                    <Link className="breadcrumbs__link" to='/'>Каталог
+                    <Link className="breadcrumbs__link" to='/'>Catalog
                       <svg width="5" height="8" aria-hidden="true">
                         <use xlinkHref="#icon-arrow-mini"></use>
                       </svg>
@@ -223,9 +223,9 @@ function ProductScreen(): JSX.Element {
                         ))
                       }
                       <p className="visually-hidden">Рейтинг: {rating}</p>
-                      <p className="rate__count"><span className="visually-hidden">Всего оценок:</span>{reviewCount}</p>
+                      <p className="rate__count"><span className="visually-hidden">Total reviews:</span>{reviewCount}</p>
                     </div>
-                    <p className="product__price"><span className="visually-hidden">Цена:</span>{separateNumbers(price)} ₽</p>
+                    <p className="product__price"><span className="visually-hidden">Price:</span>{separateNumbers(price)} $</p>
                     <button
                       className="btn btn--purple"
                       type="button"
@@ -233,7 +233,7 @@ function ProductScreen(): JSX.Element {
                     >
                       <svg width="24" height="16" aria-hidden="true">
                         <use xlinkHref="#icon-add-basket"></use>
-                      </svg>Добавить в корзину
+                      </svg>Add to the cart
                     </button>
                     <div className="tabs product__tabs">
                       <div className="tabs__controls product__tabs-controls">
@@ -241,29 +241,29 @@ function ProductScreen(): JSX.Element {
                           className={isSpecsLinkActive ? 'tabs__control is-active' : 'tabs__control'}
                           to={'?tab=specifications'}
                           onClick={() => handleSpecificationsLinkClick()}
-                        >Характеристики
+                        >Characteristics
                         </Link>
                         <Link
                           className={isDescriptionLinkActive ? 'tabs__control is-active' : 'tabs__control'}
                           to={'?tab=description'}
                           onClick={() => handleDescriptionLinkClick()}
                           data-testid="link-description"
-                        >Описание
+                        >Description
                         </Link>
                       </div>
                       <div className="tabs__content">
                         <div className={isSpecsLinkActive ? 'tabs__element is-active' : 'tabs__element'}>
                           <ul className="product__tabs-list">
-                            <li className="item-list"><span className="item-list__title">Артикул:</span>
+                            <li className="item-list"><span className="item-list__title">Vendor code:</span>
                               <p className="item-list__text">{vendorCode}</p>
                             </li>
-                            <li className="item-list"><span className="item-list__title">Категория:</span>
+                            <li className="item-list"><span className="item-list__title">Cathegory:</span>
                               <p className="item-list__text">{category}</p>
                             </li>
-                            <li className="item-list"><span className="item-list__title">Тип камеры:</span>
+                            <li className="item-list"><span className="item-list__title">Camera type:</span>
                               <p className="item-list__text">{type}</p>
                             </li>
-                            <li className="item-list"><span className="item-list__title">Уровень:</span>
+                            <li className="item-list"><span className="item-list__title">Level:</span>
                               <p className="item-list__text">{level}</p>
                             </li>
                           </ul>

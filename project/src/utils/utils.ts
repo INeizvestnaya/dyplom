@@ -40,7 +40,7 @@ export const convertDateForDateTimeAttr = (incorrectDate: string):string => {
 export const humanizeDate = (gettedDate: string): string => {
   const GET_MONTH_VALUES = [5, 7];
   const GET_DATE_VALUES = [8, 10];
-  const MONTHS:string[] = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря', ];
+  const MONTHS:string[] = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', ];
   const month = Number(gettedDate.slice(GET_MONTH_VALUES[0], GET_MONTH_VALUES[1]));
   const date = gettedDate.slice(GET_DATE_VALUES[0], GET_DATE_VALUES[1]);
   const humanizedDate = `${date} ${MONTHS[month - 1]}`;

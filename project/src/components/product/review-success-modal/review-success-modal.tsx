@@ -16,7 +16,7 @@ function ReviewSuccessModal({onCloseBtnOrOverlayClick, isReviewSuccessModalOpene
     }
   }, [isReviewSuccessModalOpened]);
 
-  //решение взято с ресурса: https://hidde.blog/using-javascript-to-trap-focus-in-an-element/ и модифициронвано
+  //solution: https://hidde.blog/using-javascript-to-trap-focus-in-an-element/ и модифициронвано
   const handleTabBtnKeydown = (evt: React.KeyboardEvent<Element>) => {
     const isFocusableElementsNotEmpty = closeButtonRef.current !== null && backToShoppingButton.current !== null;
     const isCloseBtnActiveElement = document.activeElement === closeButtonRef.current;
@@ -40,7 +40,7 @@ function ReviewSuccessModal({onCloseBtnOrOverlayClick, isReviewSuccessModalOpene
       <div className="modal__wrapper" >
         <div className="modal__overlay" onClick={() => onCloseBtnOrOverlayClick()} ></div>
         <div className="modal__content">
-          <p className="title title--h4">Спасибо за отзыв</p>
+          <p className="title title--h4">Thank you for a review!</p>
           <svg className="modal__icon" width="80" height="78" aria-hidden="true">
             <use xlinkHref="#icon-review-success"></use>
           </svg>
@@ -51,7 +51,7 @@ function ReviewSuccessModal({onCloseBtnOrOverlayClick, isReviewSuccessModalOpene
               ref={backToShoppingButton}
               onKeyDown={handleTabBtnKeydown}
               onClick={() => onCloseBtnOrOverlayClick()}
-            >Вернуться к покупкам
+            >Back to shopping
             </button>
           </div>
           <button

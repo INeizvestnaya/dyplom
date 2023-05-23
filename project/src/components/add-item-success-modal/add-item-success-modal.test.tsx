@@ -22,9 +22,9 @@ describe('Component: AddItemSuccessModal', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText(/Товар успешно добавлен в корзину/i)).toBeInTheDocument();
-    expect(screen.getByText(/Продолжить покупки/i)).toBeInTheDocument();
-    expect(screen.getByText(/Перейти в корзину/i)).toBeInTheDocument();
+    expect(screen.getByText(/Successfully added to the cart!/i)).toBeInTheDocument();
+    expect(screen.getByText(/Continue shopping/i)).toBeInTheDocument();
+    expect(screen.getByText(/To the cart/i)).toBeInTheDocument();
   });
 
   it('should close modal when user clicked Close button', async () => {
@@ -38,7 +38,7 @@ describe('Component: AddItemSuccessModal', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText(/Товар успешно добавлен в корзину/i)).toBeInTheDocument();
+    expect(screen.getByText(/Successfully added to the cart!/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('close-btn'));
 
@@ -57,7 +57,7 @@ describe('Component: AddItemSuccessModal', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText(/Товар успешно добавлен в корзину/i)).toBeInTheDocument();
+    expect(screen.getByText(/Successfully added to the cart!/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('continue-shopping-btn'));
 
@@ -93,7 +93,7 @@ describe('Component: AddItemSuccessModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Товар успешно добавлен в корзину/i)).toBeInTheDocument();
+    expect(screen.getByText(/Successfully added to the cart!/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('go-to-basket'));
 

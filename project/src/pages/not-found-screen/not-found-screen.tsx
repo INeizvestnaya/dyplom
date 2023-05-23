@@ -22,8 +22,8 @@ function NotFoundScreen(): JSX.Element {
         <main>
           <div className="page-message">
             <h1 className="page-message__title">404</h1>
-            <span className="page-message__text">Страница не найдена</span>
-            <Link className="page-message__link" to='/'>Вернуться на страницу каталога</Link>
+            <span className="page-message__text">Page not found</span>
+            <Link className="page-message__link" to='/'>Back to main page</Link>
           </div>
         </main>
 

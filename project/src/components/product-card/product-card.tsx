@@ -32,11 +32,11 @@ function ProductCard(props: ProductCardProps):JSX.Element {
               </svg>
             ))
           }
-          <p className="visually-hidden">Рейтинг: 3</p>
-          <p className="rate__count"><span className="visually-hidden">Всего оценок:</span>{reviewCount}</p>
+          <p className="visually-hidden">Rating: 3</p>
+          <p className="rate__count"><span className="visually-hidden">Reviews count:</span>{reviewCount}</p>
         </div>
         <p className="product-card__title">{`${category} ${name}`}</p>
-        <p className="product-card__price"><span className="visually-hidden">Цена:</span>{separateNumbers(price)} ₽
+        <p className="product-card__price"><span className="visually-hidden">Price:</span>{separateNumbers(price)} $
         </p>
       </div>
       <div className="product-card__buttons">
@@ -46,14 +46,14 @@ function ProductCard(props: ProductCardProps):JSX.Element {
           type="button"
           onClick={() => props.onClick ? props.onClick(id) : null}
         >
-          Купить
+          Buy
         </button>}
         {isCameraInBasket &&
         <button
           className="btn btn--purple-border product-card__btn"
           type="button"
         >
-          <span>В корзине</span>
+          <span>In the cart</span>
           <img
             src='../img/sprite/icon-basket-purple.svg'
             alt='icon-basket'
@@ -61,7 +61,7 @@ function ProductCard(props: ProductCardProps):JSX.Element {
           >
           </img>
         </button>}
-        <Link className="btn btn--transparent" to={`/product/${id}?tab=specifications`}>Подробнее
+        <Link className="btn btn--transparent" to={`/product/${id}?tab=specifications`}>More
         </Link>
       </div>
     </div>

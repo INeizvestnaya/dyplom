@@ -40,12 +40,12 @@ function Reviews({reviews, openSendReviewModal}: ReviewsProps):JSX.Element {
     <section className="review-block">
       <div className="container">
         <div className="page-content__headed">
-          <h2 className="title title--h3">Отзывы</h2>
+          <h2 className="title title--h3">Reviews</h2>
           <button
             className="btn"
             type="button"
             onClick={ () => openSendReviewModal() }
-          >Оставить свой отзыв
+          >Leave a review
           </button>
         </div>
         <ul className="review-block__list">
@@ -65,16 +65,16 @@ function Reviews({reviews, openSendReviewModal}: ReviewsProps):JSX.Element {
                         </svg>
                       ))
                     }
-                    <p className="visually-hidden">Оценка: {review.rating}</p>
+                    <p className="visually-hidden">Rating: {review.rating}</p>
                   </div>
                   <ul className="review-card__list">
-                    <li className="item-list"><span className="item-list__title">Достоинства:</span>
+                    <li className="item-list"><span className="item-list__title">Pros:</span>
                       <p className="item-list__text">{review.advantage}</p>
                     </li>
-                    <li className="item-list"><span className="item-list__title">Недостатки:</span>
+                    <li className="item-list"><span className="item-list__title">Cons:</span>
                       <p className="item-list__text">{review.disadvantage}</p>
                     </li>
-                    <li className="item-list"><span className="item-list__title">Комментарий:</span>
+                    <li className="item-list"><span className="item-list__title">Comment:</span>
                       <p className="item-list__text">{review.review}</p>
                     </li>
                   </ul>
@@ -84,7 +84,7 @@ function Reviews({reviews, openSendReviewModal}: ReviewsProps):JSX.Element {
         </ul>
         <div className="review-block__buttons">
           { isShowMoreButtonVisible &&
-          <button className="btn btn--purple" type="button" onClick={handleLoadMoreButtonClick}>Показать больше отзывов
+          <button className="btn btn--purple" type="button" onClick={handleLoadMoreButtonClick}>Show more reviews
           </button>}
         </div>
       </div>

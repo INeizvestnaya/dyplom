@@ -36,13 +36,13 @@ describe('Component: Header', () => {
       </Provider>
     );
 
-    expect(screen.getByText('Каталог')).toBeInTheDocument();
-    expect(screen.getByText('Гарантии')).toBeInTheDocument();
-    expect(screen.getByText('Доставка')).toBeInTheDocument();
-    expect(screen.getByText('О компании')).toBeInTheDocument();
+    expect(screen.getByText('Catalog')).toBeInTheDocument();
+    expect(screen.getByText('Garantees')).toBeInTheDocument();
+    expect(screen.getByText('Delivery')).toBeInTheDocument();
+    expect(screen.getByText('About')).toBeInTheDocument();
   });
 
-  it('should redirect to CatalogScreen when user clicked to link "Каталог"', async () => {
+  it('should redirect to CatalogScreen when user clicked to link "Catalog"', async () => {
     history.push('/basket');
     render(
       <Provider store={store}>
@@ -61,7 +61,7 @@ describe('Component: Header', () => {
       </Provider>
     );
 
-    expect(screen.getByText('Если у вас есть промокод на скидку, примените его в этом поле')).toBeInTheDocument();
+    expect(screen.getByText('If you have a promo code, apply it here')).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('header-catalog'));
 

@@ -21,8 +21,8 @@ describe('Component: AddItemModal', () => {
       </HistoryRouter>,
     );
 
-    expect(screen.getByText(/Добавить товар в корзину/i)).toBeInTheDocument();
-    expect(screen.getByText(/Добавить в корзину/i)).toBeInTheDocument();
+    expect(screen.getByText(/Add to the cart/i)).toBeInTheDocument();
+    expect(screen.getByText(/Add/i)).toBeInTheDocument();
   });
 
   it('should be closed when close button click', async () => {
@@ -38,8 +38,8 @@ describe('Component: AddItemModal', () => {
       </HistoryRouter>,
     );
 
-    expect(screen.getByText(/Добавить товар в корзину/i)).toBeInTheDocument();
-    expect(screen.getByText(/Добавить в корзину/i)).toBeInTheDocument();
+    expect(screen.getByText(/Add to the cart/i)).toBeInTheDocument();
+    expect(screen.getByText(/Add/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('close-btn'));
 

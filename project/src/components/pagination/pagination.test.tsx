@@ -27,10 +27,10 @@ describe('Component: Pagination', () => {
     expect(screen.getByTestId(1)).toBeInTheDocument();
     expect(screen.getByTestId(2)).toBeInTheDocument();
     expect(screen.getByTestId(3)).toBeInTheDocument();
-    expect(screen.getByText('Далее')).toBeInTheDocument();
+    expect(screen.getByText('Next')).toBeInTheDocument();
   });
 
-  it('when user click "Pagination button" (whith number) should redirect', async () => {
+  it('when user click "Pagination button" (which number) should redirect', async () => {
     history.push(AppRoute.Main);
     render(
       <HistoryRouter history={history}>
@@ -61,7 +61,7 @@ describe('Component: Pagination', () => {
     expect(screen.getByText(/Mock Catalog Page 2/i)).toBeInTheDocument();
   });
 
-  it('should be called callback "nextButtonClick" when clicked "Далее" batton', async () => {
+  it('should be called callback "nextButtonClick" when clicked "Next" button', async () => {
     const nextButtonClickHandler = jest.fn();
     render(
       <HistoryRouter history={history}>
@@ -76,7 +76,7 @@ describe('Component: Pagination', () => {
       </HistoryRouter>
     );
 
-    await userEvent.click(screen.getByText('Далее'));
+    await userEvent.click(screen.getByText('Next'));
 
     expect(nextButtonClickHandler).toBeCalled();
   });

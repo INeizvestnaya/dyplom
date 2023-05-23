@@ -27,7 +27,7 @@ describe('Component: GratitudeModal', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText(/Спасибо за покупку/i)).toBeInTheDocument();
+    expect(screen.getByText(/Thank you for choosing our shop!/i)).toBeInTheDocument();
   });
 
   it('should close modal when user clicked close button', async () => {
@@ -44,7 +44,7 @@ describe('Component: GratitudeModal', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText(/Спасибо за покупку/i)).toBeInTheDocument();
+    expect(screen.getByText(/Thank you for choosing our shop!/i)).toBeInTheDocument();
     await userEvent.click(screen.getByTestId('close-btn'));
     expect(onCloseBtnOrOverlayClick).toBeCalled();
   });
@@ -63,7 +63,7 @@ describe('Component: GratitudeModal', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText(/Спасибо за покупку/i)).toBeInTheDocument();
+    expect(screen.getByText(/Thank you for choosing our shop!/i)).toBeInTheDocument();
     await userEvent.click(screen.getByTestId('modal-overlay'));
     expect(onCloseBtnOrOverlayClick).toBeCalled();
   });
@@ -97,7 +97,7 @@ describe('Component: GratitudeModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Спасибо за покупку/i)).toBeInTheDocument();
+    expect(screen.getByText(/Thank you for choosing our shop!/i)).toBeInTheDocument();
     await userEvent.click(screen.getByTestId('back-to-shopping-btn'));
     expect(screen.getByText(/This is a catalog page/i)).toBeInTheDocument();
   });

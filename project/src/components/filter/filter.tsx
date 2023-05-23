@@ -251,9 +251,9 @@ function Filter({ params, cameras, onSetParams, onSetCurrentPage }: FilterProps)
   return (
     <div className="catalog-filter">
       <form action="#">
-        <h2 className="visually-hidden">Фильтр</h2>
+        <h2 className="visually-hidden">Filter</h2>
         <fieldset className="catalog-filter__block">
-          <legend className="title title--h5">Цена, ₽</legend>
+          <legend className="title title--h5">Price, $</legend>
           <div className="catalog-filter__price-range">
             <div className="custom-input">
               <label>
@@ -286,7 +286,7 @@ function Filter({ params, cameras, onSetParams, onSetCurrentPage }: FilterProps)
           </div>
         </fieldset>
         <fieldset className="catalog-filter__block">
-          <legend className="title title--h5">Категория</legend>
+          <legend className="title title--h5">Cathegory</legend>
           {
             CATEGORIES.map((item)=> (
               <div key={item.name} className="custom-checkbox catalog-filter__item">
@@ -304,7 +304,7 @@ function Filter({ params, cameras, onSetParams, onSetCurrentPage }: FilterProps)
           }
         </fieldset>
         <fieldset className="catalog-filter__block">
-          <legend className="title title--h5">Тип камеры</legend>
+          <legend className="title title--h5">Camera type</legend>
           {
             TYPES.map((item) => (
               <div key={item.name} className="custom-checkbox catalog-filter__item">
@@ -323,7 +323,7 @@ function Filter({ params, cameras, onSetParams, onSetCurrentPage }: FilterProps)
           }
         </fieldset>
         <fieldset className="catalog-filter__block">
-          <legend className="title title--h5">Уровень</legend>
+          <legend className="title title--h5">Level</legend>
           {
             LEVELS.map((item) => (
               <div key={item.name} className="custom-checkbox catalog-filter__item">
@@ -344,7 +344,7 @@ function Filter({ params, cameras, onSetParams, onSetCurrentPage }: FilterProps)
           className="btn catalog-filter__reset-btn"
           type="reset"
           onClick={handleResetBtnClick}
-        >Сбросить фильтры
+        >Reset filters
         </button>
       </form>
     </div>

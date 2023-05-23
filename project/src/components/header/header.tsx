@@ -82,13 +82,13 @@ function Header({ basketCount }:HeaderProps): JSX.Element {
         </Link>
         <nav className="main-nav header__main-nav">
           <ul className="main-nav__list">
-            <li className="main-nav__item"><Link className="main-nav__link" to='/' data-testid="header-catalog">Каталог</Link>
+            <li className="main-nav__item"><Link className="main-nav__link" to='/' data-testid="header-catalog">Catalog</Link>
             </li>
-            <li className="main-nav__item"><a className="main-nav__link" href="#!">Гарантии</a>
+            <li className="main-nav__item"><a className="main-nav__link" href="#!">Garantees</a>
             </li>
-            <li className="main-nav__item"><a className="main-nav__link" href="#!">Доставка</a>
+            <li className="main-nav__item"><a className="main-nav__link" href="#!">Delivery</a>
             </li>
-            <li className="main-nav__item"><a className="main-nav__link" href="#!">О компании</a>
+            <li className="main-nav__item"><a className="main-nav__link" href="#!">About</a>
             </li>
           </ul>
         </nav>
@@ -102,7 +102,7 @@ function Header({ basketCount }:HeaderProps): JSX.Element {
                 className="form-search__input"
                 type="text"
                 autoComplete="off"
-                placeholder="Поиск по сайту"
+                placeholder="Search"
                 onChange={handleSearchFromInputChange}
                 onKeyDown={handleSearchFormInputSpaceKeydown}
                 value={searchInputValue}
@@ -130,7 +130,7 @@ function Header({ basketCount }:HeaderProps): JSX.Element {
                 <li
                   className="form-search__select-item form-search__select-item-warning"
                   tabIndex={TABINDEX_VALUE}
-                >Измените параметры поиска
+                >Change search params
                 </li>
               }
             </ul>
@@ -142,7 +142,7 @@ function Header({ basketCount }:HeaderProps): JSX.Element {
           >
             <svg width="10" height="10" aria-hidden="true">
               <use xlinkHref="#icon-close"></use>
-            </svg><span className="visually-hidden">Сбросить поиск</span>
+            </svg><span className="visually-hidden">Reset search</span>
           </button>
         </div>
         <Link className="header__basket-link" to={AppRoute.Basket}>

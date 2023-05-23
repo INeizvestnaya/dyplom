@@ -21,9 +21,9 @@ function OfflineScreen(): JSX.Element {
 
         <main>
           <div className="page-message">
-            <h1 className="page-message__title">В данный момент сайт недоступен</h1>
-            <span className="page-message__text">Попробуйте ещё раз позднее</span>
-            <Link className="page-message__link" to='/'>Страница каталога</Link>
+            <h1 className="page-message__title">The site is currently unavailable</h1>
+            <span className="page-message__text">Try again later</span>
+            <Link className="page-message__link" to='/'>Catalog page</Link>
           </div>
         </main>
 

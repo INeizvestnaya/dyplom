@@ -18,7 +18,7 @@ describe('Component: Icons', () => {
       </HistoryRouter>
     );
 
-    expect(screen.getByText('Похожие товары')).toBeInTheDocument();
+    expect(screen.getByText('Similar items')).toBeInTheDocument();
     expect(screen.getByTestId('slider-controls--prev')).toHaveAttribute('disabled');
     expect(screen.getByTestId('slider-controls--next')).not.toHaveAttribute('disabled');
   });

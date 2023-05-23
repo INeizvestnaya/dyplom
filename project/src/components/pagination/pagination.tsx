@@ -32,7 +32,7 @@ function Pagination({ productsList, productsPerPage, currentPage, onPaginationLi
           <li
             className="pagination__item"
             onClick={() => onPrevButtonClick()}
-          ><Link className="pagination__link pagination__link--text" to={`/catalog/page_${currentPage - 1}`}>Назад</Link>
+          ><Link className="pagination__link pagination__link--text" to={`/catalog/page_${currentPage - 1}`}>Back</Link>
           </li>
         }
 
@@ -58,7 +58,7 @@ function Pagination({ productsList, productsPerPage, currentPage, onPaginationLi
         <li
           className="pagination__item"
           onClick={() => onNextButtonClick()}
-        ><Link className="pagination__link pagination__link--text" to={`/catalog/page_${currentPage + 1}`}>Далее</Link>
+        ><Link className="pagination__link pagination__link--text" to={`/catalog/page_${currentPage + 1}`}>Next</Link>
         </li>
         }
       </ul>

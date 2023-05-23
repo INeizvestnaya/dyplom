@@ -34,9 +34,9 @@ describe('Page: CatalogScreen', () => {
     );
 
     expect(screen.getByText('Каталог фото- и видеотехники')).toBeInTheDocument();
-    expect(screen.getByText('Цена, ₽')).toBeInTheDocument();
-    expect(screen.getByText('Сбросить фильтры')).toBeInTheDocument();
-    expect(screen.getByText('Сортировать:')).toBeInTheDocument();
+    expect(screen.getByText('Price, $')).toBeInTheDocument();
+    expect(screen.getByText('Reset filters')).toBeInTheDocument();
+    expect(screen.getByText('Sort:')).toBeInTheDocument();
   });
 
   describe('testing checkboxes of filter', () => {

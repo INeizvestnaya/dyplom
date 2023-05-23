@@ -18,10 +18,10 @@ function Banner(props: BannerProps):JSX.Element {
         <img src={`../${previewImg}`} srcSet={`../${previewImg2x} 2x`} width="1280" height="280" alt="баннер"/>
       </picture>
       <p className="banner__info">
-        <span className="banner__message">Новинка!</span>
+        <span className="banner__message">New!</span>
         <span className="title title--h1">{name}</span>
-        <span className="banner__text">Профессиональная камера от&nbsp;известного производителя</span>
-        <Link className="btn" to={`/product/${id}?tab=specifications`}>Подробнее</Link>
+        <span className="banner__text">Professional full frame camera from famous brand!</span>
+        <Link className="btn" to={`/product/${id}?tab=specifications`}>More info</Link>
       </p>
     </div>
   );

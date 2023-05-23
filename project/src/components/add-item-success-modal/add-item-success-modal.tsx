@@ -66,7 +66,7 @@ function AddItemSuccessModal({onCloseBtnOrOverlayClick, isModalOpened}: AddItemS
         >
         </div>
         <div className="modal__content">
-          <p className="title title--h4">Товар успешно добавлен в корзину</p>
+          <p className="title title--h4">Successfully added to the cart!</p>
           <svg className="modal__icon" width="86" height="80" aria-hidden="true">
             <use xlinkHref="#icon-success"></use>
           </svg>
@@ -78,7 +78,7 @@ function AddItemSuccessModal({onCloseBtnOrOverlayClick, isModalOpened}: AddItemS
               onKeyDown={handleShiftTabBtnsKeydown}
               onClick={() => onCloseBtnOrOverlayClick()}
               data-testid="continue-shopping-btn"
-            >Продолжить покупки
+            >Continue shopping
             </Link>
             <Link
               className="btn btn--purple modal__btn modal__btn--fit-width"
@@ -86,13 +86,13 @@ function AddItemSuccessModal({onCloseBtnOrOverlayClick, isModalOpened}: AddItemS
               to={AppRoute.Basket}
               onClick={() => onCloseBtnOrOverlayClick()}
               data-testid="go-to-basket"
-            >Перейти в корзину
+            >To the cart
             </Link>
           </div>
           <button
             className="cross-btn"
             type="button"
-            aria-label="Закрыть попап"
+            aria-label="Close popup"
             onClick={(evt) => handleCloseBtnOrOverlayClick(evt)}
             ref={closeButtonRef}
             onKeyDown={handleTabBtnKeydown}

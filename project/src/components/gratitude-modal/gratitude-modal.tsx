@@ -21,7 +21,7 @@ function GratitudeModal({ onCloseBtnOrOverlayClick, isModalOpened, onBackToShopp
     }
   }, [isModalOpened]);
 
-  //решение взято и модифициронвано с ресурса: https://hidde.blog/using-javascript-to-trap-focus-in-an-element/
+  //solution: https://hidde.blog/using-javascript-to-trap-focus-in-an-element/
   const handleShiftTabBtnsKeydown = (evt:React.KeyboardEvent<Element>) => {
     const isShiftTabBtnsPressed = (isTabKeyPressed(evt) || evt.code === TAB_EVENT_CODE) && evt.shiftKey;
     const isContinueBtnActiveElement = document.activeElement === continueButtonRef.current;
@@ -61,7 +61,7 @@ function GratitudeModal({ onCloseBtnOrOverlayClick, isModalOpened, onBackToShopp
         >
         </div>
         <div className="modal__content">
-          <p className="title title--h4">Спасибо за покупку</p>
+          <p className="title title--h4">Thank you for choosing our shop!</p>
           <svg className="modal__icon" width="80" height="78" aria-hidden="true">
             <use xlinkHref="#icon-review-success"></use>
           </svg>
@@ -74,7 +74,7 @@ function GratitudeModal({ onCloseBtnOrOverlayClick, isModalOpened, onBackToShopp
               onClick={onBackToShoppingBtnClick}
               onKeyDown={handleShiftTabBtnsKeydown}
               data-testid={'back-to-shopping-btn'}
-            >Вернуться к покупкам
+            >Back to shopping
             </Link>
           </div>
           <button

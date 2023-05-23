@@ -11,7 +11,7 @@ function Footer(): JSX.Element {
               <use xlinkHref="#icon-logo-mono"></use>
             </svg>
           </Link>
-          <p className="footer__description">Интернет-магазин фото- и видеотехники</p>
+          <p className="footer__description">IShotStore - online photo equipment shop</p>
           <ul className="social">
             <li className="social__item">
               <a className="link" href="#!" aria-label="Переход на страницу вконтатке">
@@ -38,52 +38,52 @@ function Footer(): JSX.Element {
         </div>
         <ul className="footer__nav">
           <li className="footer__nav-item">
-            <p className="footer__title">Навигация</p>
+            <p className="footer__title">Navigation</p>
             <ul className="footer__list">
               <li className="footer__item">
-                <Link className="link" to={AppRoute.Main} data-testid="footer-catalog">Каталог
+                <Link className="link" to={AppRoute.Main} data-testid="footer-catalog">Catalog
                 </Link>
               </li>
               <li className="footer__item">
-                <a className="link" href="#!">Гарантии
+                <a className="link" href="#!">Guarantees
                 </a>
               </li>
               <li className="footer__item">
-                <a className="link" href="#!">Доставка
+                <a className="link" href="#!">Delivery
                 </a>
               </li>
               <li className="footer__item">
-                <a className="link" href="#!">О компании
+                <a className="link" href="#!">About
                 </a>
               </li>
             </ul>
           </li>
           <li className="footer__nav-item">
-            <p className="footer__title">Ресурсы</p>
+            <p className="footer__title">Resources</p>
             <ul className="footer__list">
               <li className="footer__item">
-                <a className="link" href="#!">Курсы операторов
+                <a className="link" href="#!">Courses
                 </a>
               </li>
               <li className="footer__item">
-                <a className="link" href="#!">Блог
+                <a className="link" href="#!">Blog
                 </a>
               </li>
               <li className="footer__item">
-                <a className="link" href="#!">Сообщество
+                <a className="link" href="#!">Community
                 </a>
               </li>
             </ul>
           </li>
           <li className="footer__nav-item">
-            <p className="footer__title">Поддержка</p>
+            <p className="footer__title">Support</p>
             <ul className="footer__list">
               <li className="footer__item">
                 <a className="link" href="#!">FAQ
                 </a>
               </li>
               <li className="footer__item">
-                <a className="link" href="#!">Задать вопрос
+                <a className="link" href="#!">Ask a question
                 </a>
               </li>
             </ul>

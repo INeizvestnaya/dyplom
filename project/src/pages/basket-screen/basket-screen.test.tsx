@@ -30,7 +30,7 @@ describe('Page: BasketScreen', () => {
       </Provider>
     );
 
-    const paragraphElement = screen.getByText('Если у вас есть промокод на скидку, примените его в этом поле');
+    const paragraphElement = screen.getByText('If you have a promo code, apply it here');
 
     expect(screen.getByTestId('basket')).toBeInTheDocument();
     expect(paragraphElement).toBeInTheDocument();

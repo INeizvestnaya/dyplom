@@ -177,20 +177,20 @@ function CatalogScreen(): JSX.Element {
               <div className="container">
                 <ul className="breadcrumbs__list">
                   <li className="breadcrumbs__item">
-                    <Link className="breadcrumbs__link" to='/'>Главная
+                    <Link className="breadcrumbs__link" to='/'>Main
                       <svg width="5" height="8" aria-hidden="true">
                         <use xlinkHref="#icon-arrow-mini"></use>
                       </svg>
                     </Link>
                   </li>
-                  <li className="breadcrumbs__item"><span className="breadcrumbs__link breadcrumbs__link--active">Каталог</span>
+                  <li className="breadcrumbs__item"><span className="breadcrumbs__link breadcrumbs__link--active">Catalog</span>
                   </li>
                 </ul>
               </div>
             </div>
             <section className="catalog">
               <div className="container">
-                <h1 className="title title--h2">Каталог фото- и видеотехники</h1>
+                <h1 className="title title--h2">Catalog</h1>
                 <div className="page-content__columns">
                   <div className="catalog__aside">
 
@@ -206,7 +206,7 @@ function CatalogScreen(): JSX.Element {
                     <div className="catalog-sort">
                       <form action="#">
                         <div className="catalog-sort__inner">
-                          <p className="title title--h5">Сортировать:</p>
+                          <p className="title title--h5">Sort:</p>
                           <div className="catalog-sort__type">
                             <div className="catalog-sort__btn-text">
                               <input
@@ -216,7 +216,7 @@ function CatalogScreen(): JSX.Element {
                                 onChange={handleSortPriceBtnClick}
                                 checked={params._sort === 'price'}
                               />
-                              <label htmlFor="sortPrice">по цене</label>
+                              <label htmlFor="sortPrice">By price</label>
                             </div>
                             <div className="catalog-sort__btn-text">
                               <input
@@ -226,7 +226,7 @@ function CatalogScreen(): JSX.Element {
                                 onChange={handleSortPopularBtnClick}
                                 checked={!(params._sort === 'price')}
                               />
-                              <label htmlFor="sortPopular">по популярности</label>
+                              <label htmlFor="sortPopular">By popularity</label>
                             </div>
                           </div>
                           <div className="catalog-sort__order">

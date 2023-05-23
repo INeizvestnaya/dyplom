@@ -33,7 +33,7 @@ describe('Component: DeleteItemModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Удалить этот товар/i)).toBeInTheDocument();
+    expect(screen.getByText(/Are you sure you want to delete this item?/i)).toBeInTheDocument();
     expect(screen.getByText(/Ретрокамера Dus Auge lV/i)).toBeInTheDocument();
     expect(screen.getByText(/DA4IU67AD5/i)).toBeInTheDocument();
     expect(screen.getByTestId('delete-btn')).toBeInTheDocument();
@@ -57,7 +57,7 @@ describe('Component: DeleteItemModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Удалить этот товар/i)).toBeInTheDocument();
+    expect(screen.getByText(/Are you sure you want to delete this item?/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('close-btn'));
     expect(onCloseBtnOrOverlayClick).toBeCalled();
@@ -80,7 +80,7 @@ describe('Component: DeleteItemModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Удалить этот товар/i)).toBeInTheDocument();
+    expect(screen.getByText(/Are you sure you want to delete this item?/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('continue-btn'));
     expect(onCloseBtnOrOverlayClick).toBeCalled();
@@ -103,7 +103,7 @@ describe('Component: DeleteItemModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Удалить этот товар/i)).toBeInTheDocument();
+    expect(screen.getByText(/Are you sure you want to delete this item?/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('modal-overlay'));
     expect(onCloseBtnOrOverlayClick).toBeCalled();
@@ -126,7 +126,7 @@ describe('Component: DeleteItemModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/Удалить этот товар/i)).toBeInTheDocument();
+    expect(screen.getByText(/Are you sure you want to delete this item?/i)).toBeInTheDocument();
 
     await userEvent.click(screen.getByTestId('delete-btn'));
     expect(onDeleteBtnClick).toBeCalled();

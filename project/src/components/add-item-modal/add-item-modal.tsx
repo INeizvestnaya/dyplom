@@ -20,7 +20,7 @@ function AddItemModal({dataForAddItemModal, onCloseBtnOrOverlayClick, isModalOpe
     }
   }, [isModalOpened]);
 
-  //решение взято и модифициронвано с ресурса: https://hidde.blog/using-javascript-to-trap-focus-in-an-element/
+  //the solution: https://hidde.blog/using-javascript-to-trap-focus-in-an-element/
   const handleTabBtnKeydown = (evt:React.KeyboardEvent<Element>) => {
     const isCloseBtnActiveElement = document.activeElement === closeButtonRef.current;
     const isAddInBasketBtnActiveElement = document.activeElement === addInBasketButtonRef.current;
@@ -59,7 +59,7 @@ function AddItemModal({dataForAddItemModal, onCloseBtnOrOverlayClick, isModalOpe
         >
         </div>
         <div className="modal__content">
-          <p className="title title--h4">Добавить товар в корзину</p>
+          <p className="title title--h4">Add to the cart</p>
           <div className="basket-item basket-item--short">
             <div className="basket-item__img">
               <picture>
@@ -70,12 +70,12 @@ function AddItemModal({dataForAddItemModal, onCloseBtnOrOverlayClick, isModalOpe
             <div className="basket-item__description">
               <p className="basket-item__title">{`${category} «${name}»`}</p>
               <ul className="basket-item__list">
-                <li className="basket-item__list-item"><span className="basket-item__article">Артикул:</span> <span className="basket-item__number">{vendorCode}</span>
+                <li className="basket-item__list-item"><span className="basket-item__article">Vendor code:</span> <span className="basket-item__number">{vendorCode}</span>
                 </li>
                 <li className="basket-item__list-item">{type} {category.toLowerCase() === 'фотоаппарат' ? 'фотокамера' : 'видеокамера'}</li>
-                <li className="basket-item__list-item">{level} уровень</li>
+                <li className="basket-item__list-item">{level} level</li>
               </ul>
-              <p className="basket-item__price"><span className="visually-hidden">Цена:</span>{separateNumbers(price)} ₽</p>
+              <p className="basket-item__price"><span className="visually-hidden">Price:</span>{separateNumbers(price)} $</p>
             </div>
           </div>
           <div className="modal__buttons">
@@ -88,7 +88,7 @@ function AddItemModal({dataForAddItemModal, onCloseBtnOrOverlayClick, isModalOpe
             >
               <svg width="24" height="16" aria-hidden="true">
                 <use xlinkHref="#icon-add-basket"></use>
-              </svg>Добавить в корзину
+              </svg>Add
             </button>
           </div>
           <button

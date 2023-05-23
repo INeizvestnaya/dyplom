@@ -24,14 +24,14 @@ describe('Component: ReviewModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText('Оставить отзыв')).toBeInTheDocument();
+    expect(screen.getByText('Leave review')).toBeInTheDocument();
     expect(screen.getByText('Ваше имя')).toBeInTheDocument();
-    expect(screen.getByLabelText(/Достоинства/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Комментарий/i)).toBeInTheDocument();
-    expect(screen.getByText('Отправить отзыв')).toHaveClass('form-review__btn');
+    expect(screen.getByLabelText(/Pros/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/Comment/i)).toBeInTheDocument();
+    expect(screen.getByText('Finish review')).toHaveClass('form-review__btn');
   });
 
-  it('should get an error when input "Ваше имя" is filled, input "Достоинства" is empty and clicked submit button', async () => {
+  it('should get an error when input "Your name" is filled, input "Pros" is empty and clicked submit button', async () => {
     render(
       <Provider store={store}>
         <HistoryRouter history={history}>
@@ -44,10 +44,10 @@ describe('Component: ReviewModal', () => {
       </Provider>
     );
 
-    expect(screen.getByText('Оставить отзыв')).toBeInTheDocument();
+    expect(screen.getByText('Leave review')).toBeInTheDocument();
 
     await userEvent.type(screen.getByTestId('input-user-name'), 'Name');
-    await userEvent.click(screen.getByText('Отправить отзыв'));
+    await userEvent.click(screen.getByText('Finish review'));
 
     expect(screen.getByTestId('div-user-name')).not.toHaveClass('is-invalid');
     expect(screen.getByTestId('div-user-plus')).toHaveClass('is-invalid');

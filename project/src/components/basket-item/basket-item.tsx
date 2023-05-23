@@ -104,13 +104,13 @@ function BasketItem(props: BasketItemProps):JSX.Element {
       <div className="basket-item__description">
         <p className="basket-item__title">{category} «{name}»</p>
         <ul className="basket-item__list">
-          <li className="basket-item__list-item"><span className="basket-item__article">Артикул:</span> <span className="basket-item__number">{vendorCode}</span>
+          <li className="basket-item__list-item"><span className="basket-item__article">Vendor code:</span> <span className="basket-item__number">{vendorCode}</span>
           </li>
           <li className="basket-item__list-item">{type} {category.toLowerCase() === 'фотоаппарат' ? 'фотокамера' : 'видеокамера'}</li>
-          <li className="basket-item__list-item">{level} уровень</li>
+          <li className="basket-item__list-item">{level} level</li>
         </ul>
       </div>
-      <p className="basket-item__price"><span className="visually-hidden">Цена:</span>{separateNumbers(price)} ₽</p>
+      <p className="basket-item__price"><span className="visually-hidden">Price:</span>{separateNumbers(price)} $</p>
       <div className="quantity">
         <button
           className="btn-icon btn-icon--prev"
@@ -146,7 +146,7 @@ function BasketItem(props: BasketItemProps):JSX.Element {
           </svg>
         </button>
       </div>
-      <div className="basket-item__total-price"><span className="visually-hidden">Общая цена:</span>{separateNumbers(itemsAmount * price)} ₽</div>
+      <div className="basket-item__total-price"><span className="visually-hidden">Full price:</span>{separateNumbers(itemsAmount * price)} $</div>
       <button
         className="cross-btn"
         type="button"
