@@ -96,18 +96,13 @@ function BasketItem(props: BasketItemProps):JSX.Element {
   return (
     <li className="basket-item">
       <div className="basket-item__img">
-        <picture>
-          <source type="image/webp" srcSet={`../${previewImgWebp}, ../${previewImgWebp2x} 2x`}/>
-          <img src={`../${previewImg}`} srcSet={`../${previewImg2x} 2x`} width="140" height="120" alt="Фотоаппарат «Орлёнок»"/>
-        </picture>
+        <img src={previewImg} width="140" height="120" alt="Фотоаппарат «Орлёнок»"/>
       </div>
       <div className="basket-item__description">
-        <p className="basket-item__title">{category} «{name}»</p>
+        <p className="basket-item__title">{name}</p>
         <ul className="basket-item__list">
           <li className="basket-item__list-item"><span className="basket-item__article">Vendor code:</span> <span className="basket-item__number">{vendorCode}</span>
           </li>
-          <li className="basket-item__list-item">{type} {category.toLowerCase() === 'фотоаппарат' ? 'фотокамера' : 'видеокамера'}</li>
-          <li className="basket-item__list-item">{level} level</li>
         </ul>
       </div>
       <p className="basket-item__price"><span className="visually-hidden">Price:</span>{separateNumbers(price)} $</p>

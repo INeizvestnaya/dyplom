@@ -7,6 +7,7 @@ export enum AppRoute {
   Basket = '/basket',
   Offline = '/offline',
   FailedOrder = '/failed-order',
+  Auth = '/auth'
 }
 
 export enum NameSpace {

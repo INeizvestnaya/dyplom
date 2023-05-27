@@ -286,9 +286,9 @@ function Filter({ params, cameras, onSetParams, onSetCurrentPage }: FilterProps)
           </div>
         </fieldset>
         <fieldset className="catalog-filter__block">
-          <legend className="title title--h5">Cathegory</legend>
+          <legend className="title title--h5">Matrix</legend>
           {
-            CATEGORIES.map((item)=> (
+            [{name: 'crop', label: 'Crop'}, {name: 'ff', label: 'Full frame'}].map((item)=> (
               <div key={item.name} className="custom-checkbox catalog-filter__item">
                 <label>
                   <input
@@ -306,7 +306,7 @@ function Filter({ params, cameras, onSetParams, onSetCurrentPage }: FilterProps)
         <fieldset className="catalog-filter__block">
           <legend className="title title--h5">Camera type</legend>
           {
-            TYPES.map((item) => (
+            [{name: 'slr', label: 'SLR'}, {name: 'mirrorless', label: 'Mirrorless'}].map((item) => (
               <div key={item.name} className="custom-checkbox catalog-filter__item">
                 <label>
                   <input
@@ -323,9 +323,9 @@ function Filter({ params, cameras, onSetParams, onSetCurrentPage }: FilterProps)
           }
         </fieldset>
         <fieldset className="catalog-filter__block">
-          <legend className="title title--h5">Level</legend>
+          <legend className="title title--h5">Brand</legend>
           {
-            LEVELS.map((item) => (
+            [{name: 'nikon', label: 'Nikon'}, {name: 'canon', label: 'Canon'}, {name: 'sony', label: 'Sony'}].map((item) => (
               <div key={item.name} className="custom-checkbox catalog-filter__item">
                 <label>
                   <input

@@ -169,9 +169,6 @@ function CatalogScreen(): JSX.Element {
         />
 
         <main onKeyDown={handleEscBtnKeydown} >
-
-          <Banner promoCamera={promoCamera}/>
-
           <div className="page-content">
             <div className="breadcrumbs">
               <div className="container">

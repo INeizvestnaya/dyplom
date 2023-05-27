@@ -5,6 +5,7 @@ import { Camera, PromoCamera, Review, ReviewData, Coupon, OrderPostData } from '
 import { redirectToRoute, postReview, postOrder } from './action';
 import { APIRoute, AppRoute } from '../consts';
 import { setDiscountValueInPercent } from '../store/site-data/site-data';
+import { shopData } from './shopData';
 
 // Запрос всех камер
 export const fetchCamerasAction = createAsyncThunk<Camera[], undefined, {
@@ -16,7 +17,7 @@ export const fetchCamerasAction = createAsyncThunk<Camera[], undefined, {
   async (_arg, {rejectWithValue, dispatch, extra: api}) => {
     try {
       const {data} = await api.get<Camera[]>(APIRoute.Cameras);
-      return data;
+      return shopData;
     } catch (error) {
       return rejectWithValue(dispatch(redirectToRoute(AppRoute.Offline)));
     }
@@ -32,7 +33,8 @@ export const fetchCameraAction = createAsyncThunk<Camera, number, {
   'data/fetchCamera',
   async (id: number, {extra: api}): Promise<Camera> => {
     const {data} = await api.get<Camera>(`${APIRoute.Camera}${id}`);
-    return data;
+    const camera = shopData.find(item => item.id === id)
+    return camera;
   },
 );
 
@@ -97,7 +99,7 @@ export const fetchSortedAndFilteredCamerasAction = createAsyncThunk<Camera[], st
   'data/fetchSortedAndFilteredCameras',
   async (URL: string, {extra: api}) => {
     const {data} = await api.get<Camera[]>(`${APIRoute.Cameras}?${URL}`);
-    return data;
+    return shopData;
   },
 );
 

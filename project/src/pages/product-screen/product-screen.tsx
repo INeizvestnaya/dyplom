@@ -91,7 +91,7 @@ function ProductScreen(): JSX.Element {
 
   // Нет возможности реализовать деструктуризацию переменной "camera" раньше проверки переменной на null,
   // поскольку будет выпадать ошибка: "Type 'null' is not assignable to type 'Camera'".
-  const { name, vendorCode, type, category, description, level, rating, price, previewImg, previewImg2x, previewImgWebp, previewImgWebp2x, reviewCount } = camera;
+  const { name, vendorCode, type, category, description, level, rating, price, previewImg, reviewCount, matrix, brand, pixels, exposure, iso, weight } = camera;
 
   // Обработчики клика по Табам "Характеристики" и "Описание"
   const handleSpecificationsLinkClick = () => {
@@ -207,10 +207,7 @@ function ProductScreen(): JSX.Element {
               <section className="product">
                 <div className="container">
                   <div className="product__img">
-                    <picture>
-                      <source type="image/webp" srcSet={`../${previewImgWebp}, ../${previewImgWebp2x} 2x`}/>
-                      <img src={`../${previewImg}`} srcSet={`../${previewImg2x} 2x`} width="560" height="480" alt="Ретрокамера Das Auge IV"/>
-                    </picture>
+                    <img src={previewImg} width="560" height="480" alt={name} />
                   </div>
                   <div className="product__content">
                     <h1 className="title title--h3">{category} {name}</h1>
@@ -222,8 +219,7 @@ function ProductScreen(): JSX.Element {
                           </svg>
                         ))
                       }
-                      <p className="visually-hidden">Рейтинг: {rating}</p>
-                      <p className="rate__count"><span className="visually-hidden">Total reviews:</span>{reviewCount}</p>
+                      <p className="rate__count"><span style={{paddingRight: '8px'}}>Total reviews:</span>{reviewCount}</p>
                     </div>
                     <p className="product__price"><span className="visually-hidden">Price:</span>{separateNumbers(price)} $</p>
                     <button
@@ -257,14 +253,20 @@ function ProductScreen(): JSX.Element {
                             <li className="item-list"><span className="item-list__title">Vendor code:</span>
                               <p className="item-list__text">{vendorCode}</p>
                             </li>
-                            <li className="item-list"><span className="item-list__title">Cathegory:</span>
-                              <p className="item-list__text">{category}</p>
+                            <li className="item-list"><span className="item-list__title">Matrix type:</span>
+                              <p className="item-list__text">{matrix}</p>
                             </li>
                             <li className="item-list"><span className="item-list__title">Camera type:</span>
                               <p className="item-list__text">{type}</p>
                             </li>
-                            <li className="item-list"><span className="item-list__title">Level:</span>
-                              <p className="item-list__text">{level}</p>
+                            <li className="item-list"><span className="item-list__title">Brand:</span>
+                              <p className="item-list__text">{brand}</p>
+                            </li>
+                            <li className="item-list"><span className="item-list__title">Min / Max exposure:</span>
+                              <p className="item-list__text">1/{exposure} / 30 s</p>
+                            </li>
+                            <li className="item-list"><span className="item-list__title">Min / Max ISO:</span>
+                              <p className="item-list__text">100 / {iso}</p>
                             </li>
                           </ul>
                         </div>
@@ -279,17 +281,7 @@ function ProductScreen(): JSX.Element {
                 </div>
               </section>
             </div>
-            <div className="page-content__section">
-
-              { isSliderSectionVisible &&
-                <Slider
-                  similarCameras={similarCamerasList}
-                  onBuyButtonClick={onBuyButtonClick}
-                  basketProductsIdentifiers={currentOrderData.identifiers}
-                />}
-
-            </div>
-            <div className="page-content__section">
+            <div className="page-content__section" style={{marginTop: '100px'}}>
 
               { isReviewsSectionVisible && <Reviews reviews={reviews} openSendReviewModal={onSendReviewButonClick}/>}
 

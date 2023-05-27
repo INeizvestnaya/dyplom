@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { AppRoute } from '../../consts';
 import { useAppSelector, useAppDispatch } from '../../hooks';
 import { getCameras, getIsDataLoadedStatus } from '../../store/site-data/selectors';
+import AuthScreen from '../../pages/auth-screen/auth-screen';
 import CatalogScreen from '../../pages/catalog-screen/catalog-screen';
 import ProductScreen from '../../pages/product-screen/product-screen';
 import BasketScreen from '../../pages/basket-screen/basket-screen';
@@ -49,6 +50,10 @@ function App(): JSX.Element {
         element={<BasketScreen/>}
       >
       </Route>
+      <Route
+        path={AppRoute.Auth}
+        element={<AuthScreen/>}
+      ></Route>
       <Route
         path={AppRoute.Offline}
         element={<OfflineScreen/>}

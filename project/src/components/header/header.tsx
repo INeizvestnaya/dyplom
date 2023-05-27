@@ -74,11 +74,9 @@ function Header({ basketCount }:HeaderProps): JSX.Element {
 
   return (
     <header className="header" id="header">
-      <div className="container">
-        <Link className="header__logo" to='/' aria-label="Переход на главную">
-          <svg width="100" height="36" aria-hidden="true">
-            <use xlinkHref="#icon-logo"></use>
-          </svg>
+      <div className="container" style={{maxWidth: '1400px', padding: '0 12px'}}>
+        <Link style={{fontSize: '32px', fontWeight: 'bold', color: '#7575e2'}} to='/' aria-label="Переход на главную">
+          IShotStore
         </Link>
         <nav className="main-nav header__main-nav">
           <ul className="main-nav__list">
@@ -145,7 +143,7 @@ function Header({ basketCount }:HeaderProps): JSX.Element {
             </svg><span className="visually-hidden">Reset search</span>
           </button>
         </div>
-        <Link className="header__basket-link" to={AppRoute.Basket}>
+        <Link className="header__basket-link" to={AppRoute.Basket} style={{marginLeft: '20px'}}>
           <svg width="16" height="16" aria-hidden="true">
             <use xlinkHref="#icon-basket"></use>
           </svg>
@@ -154,6 +152,7 @@ function Header({ basketCount }:HeaderProps): JSX.Element {
             <span className="header__basket-count">{basketCount}</span>
           }
         </Link>
+        <span style={{marginLeft: '20px'}}>ilonanevmrzhitskaya@gmail.com</span>
       </div>
     </header>
   );
